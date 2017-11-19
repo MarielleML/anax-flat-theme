@@ -21,11 +21,11 @@ return [
                 "mark-if-parent" => true,
             ],
 
-        "test" => [
-            "text" => t("Test"),
-            "url" => $this->di->get("url")->create("test"),
-            "title" => t("Test page"),
-        ],
+            "test" => [
+                "text" => t("Test"),
+                "url" => $this->di->get("url")->create("test"),
+                "title" => t("Test page"),
+            ],
 
 
             "about" => [
@@ -38,7 +38,7 @@ return [
 
 
 
-/*
+
     // Used as menu together with responsive menu
     // Name of this menu
     "navbarMax" => [
@@ -64,7 +64,7 @@ return [
             ],
         ],
     ],
-*/
+
 
 
     /**

@@ -32,7 +32,7 @@ CHECK_VERSION = printf "%-15s %-10s %s\n" "`basename $(1)`" "`$(1) --version $(2
 
 
 # target: help                - Displays help.
-.PHONY:  help
+.PHONY:	help
 help:
 	@$(call HELPTEXT,$@)
 	@$(ECHO) "Usage:"
@@ -41,6 +41,26 @@ help:
 	@egrep "^# target:" Makefile | sed 's/# target: / /g'
 
 
+# target: upgrade-normalize       - Upgrade LESS module - Normalize.
+.PHONY: upgrade-normalize
+upgrade-normalize:
+	@$(call HELPTEXT,$@)
+	npm update normalize.css
+	cp theme/node_modules/normalize.css/normalize.css theme/modules/normalize.less
+
+# target: upgrade-responsive-menu - Upgrade LESS module - Responsive menu
+.PHONY: upgrade-responsive-menu
+upgrade-responsive-menu:
+	@$(call HELPTEXT,$@)
+	npm update desinax-responsive-menu
+	cp theme/node_modules/desinax-responsive-menu/src/less/responsive-menu.less modules/
+	cp theme/node_modules/desinax-responsive-menu/src/js/responsive-menu.js js/
+
+
+	# target: upgrade                 - Upgrade external LESS modules.
+.PHONY: upgrade
+upgrade: upgrade-normalize upgrade-responsive-menu
+	@$(call HELPTEXT,$@)
 
 # target: clean-cache         - Clear all cache files and set mode on cache dirs.
 .PHONY: clean-cache
