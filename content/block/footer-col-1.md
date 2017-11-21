@@ -1,5 +1,5 @@
 ####Anax Flat
 
-Page created for a web development course that is about web development and usability.
+Page created for a web development and usability course.
 
 [Get going](http://dbwebb.se/kunskap/bygg-me-sida-med-anax-flat).
