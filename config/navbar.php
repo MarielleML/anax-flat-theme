@@ -27,6 +27,11 @@ return [
                 "title" => t("Test page"),
             ],
 
+            "Grid" => [
+                "text"  => t("Grid"),
+                "url"   => $this->di->get("url")->create("grid"),
+                "title" => t("Grid")
+            ],
 
             "about" => [
                 "text"  => t("About"),

@@ -6,7 +6,7 @@
 return [
 
     "separator" => "------------------------------------------------",
-    
+
     "themes" => [
 
         "separator0" => "------------------------------------------------",
@@ -26,6 +26,43 @@ return [
                 "css/default.min.css"
             ]
         ],
+
+        "separator01" => "------------------------------------------------",
+
+        "vertical_grid"      => [
+            "title"      => "Vertical grid",
+            "class"      => "",
+            "stylesheets" => [
+                "css/vgrid.min.css"
+            ]
+        ],
+
+        "default"   => [
+            "title"      => "Your own selected default theme",
+            "class"      => "",
+            "stylesheets" => [
+                "css/default.min.css"
+            ]
+        ],
+
+        "separator02" => "------------------------------------------------",
+
+        "vertical_grid_page"      => [
+            "title"      => "Vertical grid for page",
+            "class"      => "",
+            "stylesheets" => [
+                "css/layout.min.css"
+            ]
+        ],
+
+        "default"   => [
+            "title"      => "Your own selected default theme",
+            "class"      => "",
+            "stylesheets" => [
+                "css/default.min.css"
+            ]
+        ],
+
 
         "separator1" => "------------------------------------------------",
 
