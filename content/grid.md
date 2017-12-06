@@ -1,4 +1,11 @@
-A test page
-==============================================
-
-Test page for the web page
+---
+views:
+    sideBar:
+        region: sidebar-right
+        template: default/content
+        sort: 1
+        data:
+            meta:
+                type: content   
+                route: block/sidebar
+...
