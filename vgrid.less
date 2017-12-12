@@ -26,6 +26,9 @@
 @gutterWidth:   10;
 @columns:       24;
 
+// .vgrid, .route-grid {
+//     background-image: url(../img/grid950x24x30x10-nomargin.png);
+// }
 
 
 .inner-wrap {
@@ -35,7 +38,7 @@
 
     .grid(@gridWidth);
     //& - if vgrid is showed on html, omvänd parent selector
-    html.vgrid & {
+    .vgrid & {
         .showGrid(@gridWidth, @gridImage);
     }
 
@@ -43,7 +46,7 @@
     &.inner-wrap-footer {
         @gridWidth: 100%;
         .grid(@gridWidth);
-        html.vgrid & {
+        .vgrid & {
             .showGrid(@gridWidth, @gridImage);
         }
     }
@@ -77,6 +80,10 @@
 
 //hamburger menu
 
+.rm-desktop li a {
+    color: inherit;
+    background-color: pink;
+}
 
 .logo-1 {
     position: absolute;

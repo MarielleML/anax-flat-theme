@@ -4,18 +4,19 @@
 */
 @import url(grid-float.less);
 @import url(grid-helpers.less);
-@magicNumber: 24px;
 
+@magicNumber: 24px;
 
 .flash-wrap {
     img {
-        width: 910px;
+        width: 905px;
     }
 }
 
 @columnWidth:   30;
 @gutterWidth:   10;
 @columns:       24;
+
 
 
 .inner-wrap {
@@ -25,7 +26,11 @@
 
     .grid(@gridWidth);
     //& - if vgrid is showed on html, omvänd parent selector
-    html.vgrid & {
+    .route-grid & {
+        .showGrid(@gridWidth, @gridImage);
+    }
+
+    html.vgrid &  {
         .showGrid(@gridWidth, @gridImage);
     }
 
@@ -33,6 +38,9 @@
     &.inner-wrap-footer {
         @gridWidth: 100%;
         .grid(@gridWidth);
+        .route-grid & {
+            .showGrid(@gridWidth, @gridImage);
+        }
         html.vgrid & {
             .showGrid(@gridWidth, @gridImage);
         }
